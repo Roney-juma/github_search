@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http'
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { RepositoryDetailsComponent } from './repository-details/repository-details.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { RepositoryDetailsComponent } from './repository-details/repository-deta
     TimeCountPipe,
     HighlightDirective,
     HomeComponent,
-    RepositoryDetailsComponent
+    RepositoryDetailsComponent,
+    UserDetailsComponent
   ],
   imports: [
     BrowserModule,
