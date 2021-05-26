@@ -30,7 +30,7 @@ export class GithubComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.search("Roney");
+    this.search("Roney-juma");
   }
 
   search(searchTerm:any) {

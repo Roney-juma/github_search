@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
-import { User } from "./user";
+import { User } from "./../user";
 import { HttpClient } from "@angular/common/http";
-import { environment } from "./../environments/environment";
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +8,9 @@ import { environment } from "./../environments/environment";
 export class UserHttpService {
 
   users: User[] = [];
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { 
+    
+  }
 
   searchUser(searchTerm: string) {
     let searchEndpoint = `https://api.github.com/search/users?access_token=${environment.API_KEY}&q=${searchTerm}+repos:repos:%3E10`;
