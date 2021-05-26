@@ -7,6 +7,7 @@ import { GithubComponent } from './github/github.component';
 import { SearchFormComponent } from './search-form/search-form.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { TimeCountPipe } from './time-count.pipe';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     GithubComponent,
     SearchFormComponent,
     NavbarComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    TimeCountPipe
   ],
   imports: [
     BrowserModule,
