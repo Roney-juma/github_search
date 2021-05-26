@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { User } from "../user";
+import { User } from "./user";
 import { HttpClient } from "@angular/common/http";
-import { environment } from "../../environments/environment";
+import { environment } from "./../environments/environment";
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +13,7 @@ export class UserHttpService {
 
   searchUser(searchTerm: string) {
     let searchEndpoint = `https://api.github.com/search/users?access_token=${environment.API_KEY}&q=${searchTerm}+repos:repos:%3E10`;
-    let promise = new Promise((resolve, reject) => {
+    let promise = new Promise<void>((resolve, reject) => {
       this.http
         .get(searchEndpoint)
         .toPromise()
