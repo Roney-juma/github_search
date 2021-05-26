@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from "../user";
 import { Repository } from "../repository";
-import { UserHttpServiceService } from "../services/user-http-service.service";
-import { RepoHttpServiceService } from "../services/repo-http-service.service";
+import { UserHttpService } from "../services/user-http.service";
+import { RepoHttpService } from "../services/repo-http.service";
 import { Router } from "@angular/router"
 
 @Component({
@@ -11,7 +11,7 @@ import { Router } from "@angular/router"
   styleUrls: ['./github.component.css']
 })
 export class GithubComponent implements OnInit {
-  goToUrl(id) {
+  goToUrl(id:any) {
     this.router.navigate(["/users", id]);
   }
 
@@ -24,13 +24,13 @@ export class GithubComponent implements OnInit {
   lastNum: number;
   ctr: number;
   constructor(
-    public repoHttpService: RepoHttpServiceService,
-    public userHttpService: UserHttpServiceService,
+    public repoHttpService: RepoHttpService,
+    public userHttpService: UserHttpService,
     private router: Router
   ) {}
 
   ngOnInit() {
-    this.search("Hassan");
+    this.search("Roney");
   }
 
   search(searchTerm:any) {
