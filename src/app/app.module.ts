@@ -12,6 +12,7 @@ import { HighlightDirective } from './highlight.directive';
 import { HttpClientModule } from '@angular/common/http'
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
+import { RepositoryDetailsComponent } from './repository-details/repository-details.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HomeComponent } from './home/home.component';
     NotFoundComponent,
     TimeCountPipe,
     HighlightDirective,
-    HomeComponent
+    HomeComponent,
+    RepositoryDetailsComponent
   ],
   imports: [
     BrowserModule,
