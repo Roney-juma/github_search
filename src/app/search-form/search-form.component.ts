@@ -9,10 +9,11 @@ export class SearchFormComponent implements OnInit {
 
   @Output() emitSearch = new EventEmitter<any>()
 
-  searchTerm: string;
+  searchTerm!: string;
+
   constructor() { }
 
-  earch(){
+  search(){
     this.emitSearch.emit(this.searchTerm);
   }
 
