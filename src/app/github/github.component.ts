@@ -15,14 +15,14 @@ export class GithubComponent implements OnInit {
     this.router.navigate(["/users", id]);
   }
 
-  repositories: Repository[];
-  userRepositories: Repository[];
-  users: User[];
+  repositories!: Repository[];
+  userRepositories!: Repository[];
+  users!: User[];
   show: boolean = false;
 
-  startNum: number;
-  lastNum: number;
-  ctr: number;
+  startNum!: number;
+  lastNum!: number;
+  ctr!: number;
   constructor(
     public repoHttpService: RepoHttpService,
     public userHttpService: UserHttpService,
