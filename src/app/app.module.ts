@@ -11,6 +11,7 @@ import { TimeCountPipe } from './time-count.pipe';
 import { HighlightDirective } from './highlight.directive';
 import { HttpClientModule } from '@angular/common/http'
 import { FormsModule } from '@angular/forms';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FormsModule } from '@angular/forms';
     NavbarComponent,
     NotFoundComponent,
     TimeCountPipe,
-    HighlightDirective
+    HighlightDirective,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
