@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { Repository } from "../repository";
-import { environment } from "./../environments/environment";
+import { environment } from "./../../environments/environment";
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +13,7 @@ export class RepoHttpService {
 
 
   searchRepo(searchTerm: string) {
-    let searchEndpoint = `https://api.github.com/search/repositories?access_token=${environment.API_KEY}&q=${searchTerm}&sort=star&order=desc`;
+    let searchEndpoint = `https://api.github.com/search/repositories?&q=${searchTerm}&sort=star&order=desc`;
     let promise = new Promise<void>((resolve, reject) => {
       this.http
         .get(searchEndpoint)
